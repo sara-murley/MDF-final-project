@@ -1,12 +1,12 @@
 title: The Impact of Internet Connectivity on Socioeconomic Outcomes
-description: Big Data Analytics Project – PPOL 5206
+description: Big Data Analytics Project PPOL 5206
 
-theme: minima
-
-markdown: kramdown
+remote_theme: zerostaticthemes/jekyll-serif-theme
 
 plugins:
-  - jekyll-feed
+  - jekyll-remote-theme
+
+markdown: kramdown
 
 baseurl: "/MDF-final-project"
 url: "https://sara-murley.github.io"
