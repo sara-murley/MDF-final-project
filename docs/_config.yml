@@ -1,52 +1,12 @@
-baseurl: '/MDF-final-project/'
-url: "https://sara-murley.github.io"
-permalink: pretty
-title: 'Jekyll Serif'
+title: The Impact of Internet Connectivity on Socioeconomic Outcomes
+description: Big Data Analytics Project – PPOL 5206
 
-logo:
-  mobile: "images/logo/logo-mobile.svg"
-  mobile_height: "32px"
-  mobile_width: "32px"
-  desktop: "images/logo/logo.svg"
-  desktop_height: "32px"
-  desktop_width: "120px"
+theme: minima
 
-home: 
-  limit_services: 6
-
-collections:
-  services:
-    output: true
-    sort_by: weight
-  team:
-    output: true
-
-defaults:
-  - scope:
-      path: ""
-      type: "services"
-    values:
-      layout: "service"
-  - scope:
-      path: ""
-      type: "team"
-    values:
-      layout: "team"
-
-sass:
-  style: compressed # possible values: nested expanded compact compressed
+markdown: kramdown
 
 plugins:
-  - jekyll-environment-variables
+  - jekyll-feed
 
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - LICENSE.md
-  - LICENSE
-  - README.md
+baseurl: "/MDF-final-project"
+url: "https://sara-murley.github.io"
