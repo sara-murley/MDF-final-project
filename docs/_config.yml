@@ -1,2 +1,8 @@
 title: The Impact of Internet Connectivity on Socioeconomic Outcomes
-theme: jekyll-theme-cayman
+description: Big Data Analytics Project – PPOL 5206
+theme: jekyll-serif-theme
+
+baseurl: ""
+url: ""
+
+markdown: kramdown
