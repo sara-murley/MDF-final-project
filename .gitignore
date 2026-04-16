@@ -1,0 +1,38 @@
+# macOS system files
+.DS_Store
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+
+# Snowflake / credentials (important)
+*.pem
+*.key
+credentials.json
+
+# AWS credentials
+.aws/
+
+# VS Code settings (optional but common)
+.vscode/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+
+# OS-generated files
+Thumbs.db
