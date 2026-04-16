@@ -1,20 +1,21 @@
 main:
-  - name: Home
-    url: /
-    weight: 1
-
-  - name: Data
-    url: /data/
+  - name: "Services"
+    url: "/services/"
     weight: 2
-
-  - name: Methods
-    url: /methods/
+  - name: "Team"
+    url: "/team/"
     weight: 3
-
-  - name: Results
-    url: /results/
+  - name: "About"
+    url: "/about/"
     weight: 4
-
-  - name: Team
-    url: /team/
+  - name: "Contact"
+    url: "/contact/"
     weight: 5
+
+footer:
+  - name: "Home"
+    url: "/"
+    weight: 1
+  - name: "Contact"
+    url: "/contact/"
+    weight: 2
