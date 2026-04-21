@@ -22,4 +22,5 @@ aux_links:
 footer_content: "PPOL 5206 Big Data Analytics Project · Georgetown University"
 
 plugins:
+  - jekyll-remote-theme
   - jekyll-feed
