@@ -1,7 +1,7 @@
 ---
 ---
 
-// ─── Colors ───────────────────────────────────────────
+// ─── Color Variables ──────────────────────────────────
 $body-background-color: #ffffff;
 $sidebar-color: #f4f6f9;
 $link-color: #1b4f72;
@@ -15,17 +15,18 @@ $search-background-color: #fff;
 $table-background-color: #f8fafc;
 $code-background-color: #f0f4f8;
 
-// ─── Typography ───────────────────────────────────────
+// ─── Typography Variables ─────────────────────────────
 $body-font-family: "Source Serif 4", Georgia, serif;
 $mono-font-family: "JetBrains Mono", "Fira Code", monospace;
 $root-font-size: 16px;
 $body-line-height: 1.75;
 
-// ─── Layout ───────────────────────────────────────────
+// ─── Layout Variables ─────────────────────────────────
 $content-width: 860px;
 $nav-width: 248px;
 
-@import "{{ site.theme }}";
+// NOTE: No @import here — remote_theme loads the theme SASS automatically.
+// Only add plain CSS overrides below this line.
 
 // ─── Google Fonts ─────────────────────────────────────
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
@@ -46,9 +47,7 @@ $nav-width: 248px;
 .nav-list .nav-list-item .nav-list-link {
   border-radius: 5px;
   transition: background 0.15s ease;
-  &:hover {
-    background-color: #e8eef4;
-  }
+  &:hover { background-color: #e8eef4; }
   &.active {
     background-color: #d4e6f1;
     color: $link-color;
@@ -58,18 +57,17 @@ $nav-width: 248px;
 
 // ─── Main content ─────────────────────────────────────
 .main-content {
-  h1 { 
-    border-bottom: 2px solid #d4e6f1; 
+  h1 {
+    border-bottom: 2px solid #d4e6f1;
     padding-bottom: 0.4em;
     margin-bottom: 1.2em;
   }
-  h2 { 
+  h2 {
     color: #1a5276;
     margin-top: 2em;
   }
   p { color: $body-text-color; }
 
-  // Better tables
   table {
     font-size: 0.9rem;
     border-collapse: collapse;
@@ -86,7 +84,6 @@ $nav-width: 248px;
     }
   }
 
-  // Inline code
   code {
     background: $code-background-color;
     border: 1px solid #dce3ea;
@@ -96,7 +93,6 @@ $nav-width: 248px;
     color: #1a5276;
   }
 
-  // Code blocks
   div.highlighter-rouge, figure.highlight {
     border-left: 3px solid $btn-primary-color;
     border-radius: 0 6px 6px 0;
@@ -104,8 +100,8 @@ $nav-width: 248px;
   }
 }
 
-// ─── Callout / Note boxes ─────────────────────────────
-.callout, blockquote {
+// ─── Blockquotes / callouts ───────────────────────────
+blockquote {
   border-left: 4px solid $btn-primary-color;
   background: #eaf4fb;
   border-radius: 0 6px 6px 0;
