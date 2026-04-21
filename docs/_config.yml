@@ -6,6 +6,8 @@ baseurl: "/MDF-final-project"
 
 remote_theme: just-the-docs/just-the-docs
 
+favicon_ico: "/MDF-final-project/assets/images/favicon.ico"
+
 color_scheme: custom
 
 search_enabled: true

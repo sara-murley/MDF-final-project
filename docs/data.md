@@ -285,20 +285,6 @@ print(df_base.groupby('investment_cluster').agg(
 
 ---
 
-## Visualization Checklist
-
-The following figures are referenced throughout the site. Run `analysis.py` and save outputs to `assets/images/` before deploying.
-
-| Figure | File | Where Used |
-|---|---|---|
-| Correlation heatmap | `fig1_corr_heatmap.png` | Results §1 |
-| Scatter grid (internet vs. outcomes) | `fig2_scatter_grid.png` | Results §1 |
-| Coefficient plot (baseline vs. interaction) | `fig3_coef_plot.png` | Results §2 |
-| Marginal effects plot | `fig4_marginal_effects.png` | Results §3 |
-| Time series (selected countries) | `fig5_time_series.png` | Results §4 |
-| Nonlinear returns curve | `fig6_nonlinear_curve.png` | Results §5 |
-| Cluster world map | `fig7_cluster_map.png` | Results §6 |
-| Cluster profile bar chart | `fig8_cluster_profiles.png` | Results §6 |
 
 [View the Results →](results){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [GitHub Repository →](https://github.com/sara-murley/MDF-final-project){: .btn .fs-5 .mb-4 .mb-md-0 }

@@ -77,7 +77,7 @@ K-means clustering on regression-derived features places countries into four pro
 
 | Cluster | Profile | Recommendation |
 |---|---|---|
-| **0** | Low connectivity, moderate income, high absorptive capacity | ⭐ Primary investment target |
+| **0** | Low connectivity, moderate income, high absorptive capacity | **Primary investment target** |
 | **1** | Very low connectivity, very low income | Foundational development preconditions needed first |
 | **2** | Mid-income, approaching saturation (~50% penetration) | Secondary target; efficiency-focused investments |
 | **3** | High income, fully saturated (>80% penetration) | Shift to advanced digital transformation policy |

@@ -34,7 +34,7 @@ To embed: ![Correlation heatmap](../assets/images/fig1_corr_heatmap.png)
 
 **[FIGURE 1 — Correlation heatmap — insert `fig1_corr_heatmap.png` here]**
 
-The correlation matrix reveals strong positive associations across all four variables. Internet penetration correlates at **r = 0.80** with log GDP per capita, **r = [X]** with secondary enrollment, and **r = [X]** with life expectancy. GDP per capita and life expectancy correlate at **r = 0.83**.
+The correlation matrix reveals strong positive associations across all four variables. Internet penetration correlates at **r = 0.80** with log GDP per capita, **r = 0.71** with secondary enrollment, and **r = 0.72** with life expectancy. GDP per capita and life expectancy correlate at **r = 0.83**.
 
 These patterns confirm the central empirical challenge: internet access, income, education, and health are so deeply intertwined that any single-variable regression would conflate the effect of connectivity with the general effect of being a wealthy, well-developed country. The correlation between internet access and GDP alone is 0.80 — strong enough that a model omitting GDP would attribute much of the income effect to connectivity. **All subsequent models control for log GDP per capita.**
 
@@ -54,11 +54,10 @@ Save as: assets/images/fig2_scatter_grid.png
 
 | | Coefficient | Std. Error | p-value |
 |---|---|---|---|
-| Internet users (%) | **0.170** | [s.e.] | < 0.05 |
-| Log GDP per capita | **~12.0** | [s.e.] | < 0.001 |
-| Constant | [val] | [s.e.] | |
-| R² | [val] | | |
-| N | [N] | | |
+| Internet users (%) | **0.17** | 0.01 | < 0.001 |
+| Log GDP per capita | **~12** | 0.30 | < 0.001 |
+| R² | 0.65 | | |
+| N | 3824 | | |
 
 {: .note }
 **Interpretation.** A 1 percentage point increase in internet penetration is associated with a **+0.17 pp increase in secondary enrollment**, controlling for income. A one-unit increase in log GDP per capita — roughly a 2.7× increase in income — is associated with a **+12 pp increase** in enrollment. Both coefficients are statistically significant.
@@ -83,12 +82,12 @@ This makes the change in the internet coefficient across specifications visually
 
 | | Coefficient | Std. Error | p-value |
 |---|---|---|---|
-| Internet users (%) | **1.58** | [s.e.] | < 0.001 |
-| Log GDP per capita | [val] | [s.e.] | < 0.001 |
-| Internet × log GDP | **−0.130** | [s.e.] | < 0.001 |
-| Year FEs | Included | | |
-| R² | [val] | | |
-| N | [N] | | |
+| Internet users (%) | **1.58** | 0.06 | < 0.001 |
+| Log GDP per capita | **13.78** | 0.38 | < 0.001 |
+| Internet × log GDP | **−0.13** | 0.00 | < 0.001 |
+| Year FEs |  | | |
+| R² | 0.70 | | |
+| N | 3824 | | |
 
 {: .note }
 **Interpretation.** The positive coefficient on internet access (1.58) shows that, holding GDP and global time trends constant, higher internet penetration is associated with substantially higher secondary enrollment. But the negative interaction term (−0.130) is the central finding: **the marginal effect of internet access on education declines as GDP increases.**
@@ -114,10 +113,10 @@ Save as: assets/images/fig4_marginal_effects.png
 
 | | Coefficient | Std. Error | p-value |
 |---|---|---|---|
-| Δ Internet users (%) | **0.0265** | [s.e.] | < 0.05 |
-| Year FEs | Included | | |
-| R² | [val] | | |
-| N (country-year pairs) | [N] | | |
+| Δ Internet users (%) | **0.0265** | 0.00 | < 0.001 |
+| Year FEs |  | | |
+| R² | 0.13 | | |
+| N (country-year pairs) | 3602 | | |
 
 {: .note }
 **Interpretation.** A 1 percentage point increase in internet penetration within a country in a given year is associated with a **+0.027-year increase in life expectancy** in the same period, after removing time-invariant country characteristics and controlling for global year shocks.
@@ -143,12 +142,12 @@ Save as: assets/images/fig5_time_series.png
 
 | | Coefficient | Std. Error | p-value |
 |---|---|---|---|
-| Internet users (%) | **0.90** | [s.e.] | < 0.001 |
-| Internet users (%)² | **−0.0057** | [s.e.] | < 0.001 |
-| Log GDP per capita | [val] | [s.e.] | < 0.001 |
-| Year FEs | Included | | |
-| R² | [val] | | |
-| N | [N] | | |
+| Internet users (%) | **0.90** | 0.04 | < 0.001 |
+| Internet users (%)² | **−0.01** | 0.00 | < 0.001 |
+| Log GDP per capita | **9.15** | 0.37 | < 0.001 |
+| Year FEs |  | | |
+| R² | 0.68 | | |
+| N | 3824 | | |
 
 {: .note }
 **Interpretation.** The significant negative quadratic coefficient (−0.0057) confirms a **concave relationship**: the marginal effect of internet penetration on secondary enrollment is positive but decreasing. Using the estimated coefficients, the turning point — where the marginal return approaches zero — is at approximately **79% penetration** (= 0.90 / (2 × 0.0057)), but the curve flattens substantially earlier, around **60–70%**, which is the practical saturation zone for policy purposes.
@@ -185,10 +184,10 @@ Save as: assets/images/fig7_cluster_map.png
 
 | Cluster | N Countries | Internet (%) | Log GDP | Sec. Enrollment (%) | Life Exp. |
 |---|---|---|---|---|---|
-| **0** — Primary target | [N] | 17.2 | 9.14 | 93.4 | 74.5 |
-| **1** — Constrained | [N] | 2.4 | 6.90 | 51.2 | 62.4 |
-| **2** — Secondary target | [N] | 47.8 | 10.22 | 102.3 | 77.8 |
-| **3** — Saturated | [N] | 88.9 | 10.82 | 117.5 | 82.8 |
+| **0** | 53 | 17.2 | 9.14 | 93.4 | 74.5 |
+| **1** | 140 | 2.4 | 6.90 | 51.2 | 62.4 |
+| **2**  | 25 | 47.8 | 10.22 | 102.3 | 77.8 |
+| **3**  | 4 | 88.9 | 10.82 | 117.5 | 82.8 |
 
 ### Cluster 0 — Primary Investment Target
 

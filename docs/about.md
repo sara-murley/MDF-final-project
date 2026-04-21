@@ -11,14 +11,15 @@ nav_order: 5
 
 ## Overview
 
-This project was completed as part of **PPOL 5206: Big Data Analytics** at the Georgetown University McCourt School of Public Policy. It examines the relationship between internet connectivity and human development outcomes — specifically secondary education enrollment and life expectancy — across 180+ countries from 2000 to 2023.
+This project was completed as part of **PPOL 5206: Massive Data Fundamentals** at the Georgetown University McCourt School of Public Policy. It examines the relationship between internet connectivity and human development outcomes — specifically secondary education enrollment and life expectancy. 
 
 The analysis is built on a cloud-based data infrastructure (AWS S3 + RDS), a progressive sequence of OLS regression models, and a K-means clustering framework designed to translate statistical findings into policy-relevant investment guidance.
 
 ## Authors
 
 **Sara Murley, Mena Tetali, Samantha Rudra**    
-Master of Public Policy, Georgetown University McCourt School of Public Policy  
+Master of Science, Data Science for Public Policy
+Georgetown University McCourt School of Public Policy  
 
 ## Tools & Infrastructure
 

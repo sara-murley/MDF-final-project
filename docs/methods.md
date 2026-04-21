@@ -137,25 +137,33 @@ Stage 5: Nonlinear (Quadratic) Model + Clustering
 
 ### Model 1 — Baseline OLS
 
-$$Y_{i} = \alpha + \beta_1 \cdot \text{Internet}_i + \beta_2 \cdot \log(\text{GDP})_i + \varepsilon_i$$
+$$
+Y_{i} = \alpha + \beta_1 \cdot \text{Internet}_i + \beta_2 \cdot \log(\text{GDP})_i + \varepsilon_i
+$$
 
 A pooled cross-sectional regression establishing the baseline association between internet access and secondary enrollment, controlling for income. This model does not control for time trends or country fixed effects; its estimates reflect cross-country structural differences and are subject to omitted variable bias. It is included as a transparency step — to show what the naive estimate looks like before more rigorous controls are introduced.
 
 ### Model 2 — Interaction Model with Year Fixed Effects
 
-$$Y_{it} = \alpha + \beta_1 \cdot \text{Internet}_{it} + \beta_2 \cdot \log(\text{GDP})_{it} + \beta_3 \cdot (\text{Internet} \times \log\text{GDP})_{it} + \lambda_t + \varepsilon_{it}$$
+$$
+Y_{it} = \alpha + \beta_1 \cdot \text{Internet}_{it} + \beta_2 \cdot \log(\text{GDP})_{it} + \beta_3 \cdot (\text{Internet} \times \log\text{GDP})_{it} + \lambda_t + \varepsilon_{it}
+$$
 
 Year fixed effects (λ_t) absorb any global shocks common to all countries in a given year — the 2008 financial crisis, the COVID-19 pandemic, the global expansion of mobile internet — ensuring that the estimated coefficients reflect within-year variation across countries rather than global time trends. The interaction term tests the hypothesis that the marginal effect of connectivity varies by income level.
 
 ### Model 3 — First-Difference Model (Health Outcome)
 
-$$\Delta \text{LifeExp}_{it} = \alpha + \beta \cdot \Delta \text{Internet}_{it} + \lambda_t + \varepsilon_{it}$$
+$$
+\Delta \text{LifeExp}_{it} = \alpha + \beta \cdot \Delta \text{Internet}_{it} + \lambda_t + \varepsilon_{it}
+$$
 
 By regressing year-over-year *changes* in life expectancy on year-over-year *changes* in internet penetration within the same country, this specification removes all time-invariant country heterogeneity — geography, historical institutions, cultural factors — that could confound the cross-sectional relationship. Year fixed effects additionally control for common global health shocks (e.g., pandemic years). This is the most credibly causal specification in the analysis.
 
 ### Model 4 — Quadratic Model
 
-$$Y_{it} = \alpha + \beta_1 \cdot \text{Internet}_{it} + \beta_2 \cdot \text{Internet}_{it}^2 + \beta_3 \cdot \log(\text{GDP})_{it} + \lambda_t + \varepsilon_{it}$$
+$$
+Y_{it} = \alpha + \beta_1 \cdot \text{Internet}_{it} + \beta_2 \cdot \text{Internet}_{it}^2 + \beta_3 \cdot \log(\text{GDP})_{it} + \lambda_t + \varepsilon_{it}
+$$
 
 Introduces a quadratic internet term to test for nonlinearity. A significant negative β_2 confirms diminishing marginal returns. The turning point (penetration level at which marginal returns approach zero) is derived from the estimated coefficients: $\text{turning point} = -\hat{\beta}_1 / (2\hat{\beta}_2)$.
 
