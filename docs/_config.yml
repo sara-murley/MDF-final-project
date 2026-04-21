@@ -1,12 +1,25 @@
-title: The Impact of Internet Connectivity on Socioeconomic Outcomes
-description: Big Data Analytics Project – PPOL 5206
+title: Internet Connectivity & Development Outcomes
 
-theme: minima
+description: Policy Evidence from Global Broadband Expansion
 
-markdown: kramdown
+url: "https://sara-murley.github.io"
+baseurl: "/MDF-final-project"
+
+remote_theme: just-the-docs/just-the-docs
+
+color_scheme: custom
+
+search_enabled: true
+heading_anchors: true
+
+nav_enabled: true
+nav_sort: case_sensitive
+
+aux_links:
+  GitHub Repository:
+    - "https://github.com/sara-murley/MDF-final-project"
+
+footer_content: "PPOL 5206 Big Data Analytics Project · Georgetown University"
 
 plugins:
   - jekyll-feed
-
-baseurl: "/MDF-final-project"
-url: "https://sara-murley.github.io"
