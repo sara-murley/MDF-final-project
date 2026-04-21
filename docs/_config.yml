@@ -1,6 +1,5 @@
-title: Internet Connectivity & Development Outcomes
-
-description: Policy Evidence from Global Broadband Expansion
+title: Broadband & Development
+description: "Policy Evidence from Global Broadband Expansion — PPOL 5206, Georgetown University"
 
 url: "https://sara-murley.github.io"
 baseurl: "/MDF-final-project"
@@ -16,11 +15,14 @@ nav_enabled: true
 nav_sort: case_sensitive
 
 aux_links:
-  GitHub Repository:
+  GitHub:
     - "https://github.com/sara-murley/MDF-final-project"
 
-footer_content: "PPOL 5206 Big Data Analytics Project · Georgetown University"
+aux_links_new_tab: true
+
+footer_content: "PPOL 5206 Big Data Analytics · Georgetown University McCourt School of Public Policy"
 
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
+  - jekyll-seo-tag
