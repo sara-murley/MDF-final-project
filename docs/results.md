@@ -25,7 +25,7 @@ The first step is establishing the raw associations between internet penetration
 
 The map below shows internet penetration rates by country for the most recent available year. The geographic concentration of low connectivity in Sub-Saharan Africa and parts of South Asia is immediately visible, as is the near-universal coverage across North America, Western Europe, and East Asia.
 
-<iframe src="../assets/images/internet_map.html" width="100%" height="450px" frameborder="0" scrolling="no"></iframe>
+<iframe src="assets/images/internet_map.html" width="100%" height="450px" frameborder="0" scrolling="no"></iframe>
 *Figure 1. Internet users as a percentage of population, most recent available year. Hover over a country for details. Source: World Bank WDI.*
 
 ---
@@ -34,7 +34,7 @@ The map below shows internet penetration rates by country for the most recent av
 
 The box plots below show how the global distribution of internet penetration has shifted from 2000 to 2023. The median has risen substantially, but the spread has also widened — the upper quartile has pulled far ahead while the lower quartile remains compressed near zero.
 
-![Distribution of internet penetration over time](../assets/images/internet_distribution_over_time.png)
+![Distribution of internet penetration over time](assets/images/internet_distribution_over_time.png)
 *Figure 2. Distribution of internet users (% of population) across countries by year, 2000–2023. Each box shows the interquartile range; whiskers extend to 1.5× IQR. Source: World Bank WDI.*
 
 ---
@@ -43,7 +43,7 @@ The box plots below show how the global distribution of internet penetration has
 
 The widening spread in Figure 2 is not random — it is driven by a systematic divergence between high- and low-income countries. The chart below shows the percentage point gap in internet penetration between high-income and low-income countries over time.
 
-![Digital inequality over time](../assets/images/digital_inequality_over_time.png)
+![Digital inequality over time](assets/images/digital_inequality_over_time.png)
 *Figure 3. Percentage point difference in mean internet penetration between high-income and low-income countries, 2000–2023. Source: World Bank WDI.*
 
 The gap has grown consistently across the entire study period. High-income countries entered the 2000s with a connectivity advantage and compounded it — accelerating through mobile internet adoption while low-income countries remained constrained by infrastructure and affordability. This divergence is the empirical backdrop for the regression analysis: understanding whether connectivity *causes* better outcomes, or merely reflects underlying wealth, is essential before drawing policy conclusions from these trends.
@@ -54,7 +54,7 @@ The gap has grown consistently across the entire study period. High-income count
 
 The correlation matrix below confirms that internet penetration, GDP per capita, life expectancy, and secondary enrollment are all strongly positively associated with one another.
 
-![Correlation matrix](../assets/images/correlation_matrix.png)
+![Correlation matrix](assets/images/correlation_matrix.png)
 *Figure 4. Pearson correlation matrix for internet penetration, log GDP per capita, life expectancy, and secondary enrollment. Source: World Bank WDI.*
 
 Internet penetration correlates at **r = 0.80** with log GDP per capita, **r = 0.71** with secondary enrollment, and **r = 0.72** with life expectancy. GDP per capita and life expectancy correlate at **r = 0.83**.
@@ -67,7 +67,7 @@ These patterns confirm the central empirical challenge: internet access, income,
 
 Before modeling, it is useful to see the raw bivariate relationship between internet access and income.
 
-![Internet penetration vs. GDP per capita](../assets/images/internet_vs_gdp.png)
+![Internet penetration vs. GDP per capita](assets/images/internet_vs_gdp.png)
 *Figure 5. Internet users (% of population) vs. log GDP per capita, all country-year observations. Linear regression line shown. Source: World Bank WDI.*
 
 The strong positive slope confirms the omitted variable concern. A naive regression of any development outcome on internet access — without controlling for income — would largely be picking up this relationship.
@@ -92,7 +92,7 @@ The most important takeaway is the *relative magnitudes*. The internet coefficie
 
 The scatter plot below shows the internet–enrollment relationship directly. The nonlinear fit visible in the regression line motivates the quadratic specification in Model 4.
 
-![Internet penetration vs. secondary enrollment](../assets/images/internet_vs_enrollment.png)
+![Internet penetration vs. secondary enrollment](assets/images/internet_vs_enrollment.png)
 *Figure 6. Internet users (% of population) vs. secondary school enrollment (gross %), all country-year observations. Nonlinear regression line shown. Source: World Bank WDI.*
 
 ---
@@ -163,12 +163,12 @@ For a country at 10% penetration, an additional percentage point of internet acc
 
 Countries are grouped using K-means clustering on six features derived from the regression analysis, applied to each country's earliest available observation to capture its *baseline* position on the returns curve. The map below shows cluster assignments geographically.
 
-<iframe src="../assets/images/internet_map_clustered.html" width="100%" height="450px" frameborder="0" scrolling="no"></iframe>
+<iframe src="assets/images/internet_map_clustered.html" width="100%" height="450px" frameborder="0" scrolling="no"></iframe>
 *Figure 7. Country cluster assignments from K-means analysis. Hover over a country for details. Source: World Bank WDI, authors' analysis.*
 
 The scatter plot below shows how clusters separate in the internet penetration × GDP space — the two dimensions that most directly determine a country's position on the returns curve.
 
-![Internet penetration vs. GDP per capita, by cluster](../assets/images/internet_vs_gdp_clustered.png)
+![Internet penetration vs. GDP per capita, by cluster](assets/images/internet_vs_gdp_clustered.png)
 *Figure 8. Internet users (% of population) vs. log GDP per capita, colored by investment cluster. Source: World Bank WDI, authors' analysis.*
 
 ### Cluster Profiles
