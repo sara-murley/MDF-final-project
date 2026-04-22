@@ -53,9 +53,9 @@ pip install -r requirements.txt
 
 ---
 
-## Script 1: Data Ingestion (`get_data.py`)
+## Notebook 1: Data Ingestion (`01-get-data.ipynb`)
 
-This script handles the full data pipeline from API to database. It is designed to be run once (or re-run when updated data is needed) and does not need to be re-executed for analysis.
+This notebook handles the full data pipeline from API to database. It is designed to be run once (or re-run when updated data is needed) and does not need to be re-executed for analysis.
 
 ### What it does
 
@@ -143,9 +143,9 @@ merged.to_sql("worldbank_panel", engine, if_exists="replace", index=False)
 
 ---
 
-## Script 2: Analysis (`analysis.py`)
+## Notebook 2: Analysis (`02-analysis.ipynb`)
 
-This script reads the panel from RDS, runs all five analytical stages, and generates the figures used throughout the site. Each section is self-contained and can be run independently once the database connection is established.
+This notebook reads the panel from RDS, runs all five analytical stages, and generates the figures used throughout the site. Each section is self-contained and can be run independently once the database connection is established.
 
 ### Database connection
 
@@ -188,7 +188,6 @@ plt.figure(figsize=(8, 6))
 sns.heatmap(corr, annot=True, fmt=".2f", cmap="coolwarm",
             center=0, square=True, linewidths=0.5)
 plt.title("Correlation Matrix: Internet Access and Socioeconomic Outcomes")
-plt.savefig("assets/images/fig1_corr_heatmap.png", dpi=150, bbox_inches="tight")
 ```
 
 ### Baseline OLS
@@ -231,7 +230,7 @@ X = sm.add_constant(pd.concat([
 ], axis=1))
 
 model_fd = sm.OLS(df_diff['life_exp_change'].astype(float), X).fit()
-print(model_fd.summary())
+print(model_fd.summary()) 
 ```
 
 ### Quadratic model
